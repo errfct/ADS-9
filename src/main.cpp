@@ -35,20 +35,25 @@ int main() {
         for (int i = 0; i < n; ++i) test_input.push_back('1' + i);
         PMTree test_tree(test_input);
 
-        std::chrono::high_resolution_clock::time_point start = std::chrono::high_resolution_clock::now();
+        std::chrono::high_resolution_clock::time_point start =
+        std::chrono::high_resolution_clock::now();
         getAllPerms(test_tree);
-        std::chrono::high_resolution_clock::time_point end = std::chrono::high_resolution_clock::now();
-        std::chrono::microseconds time_all = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::chrono::high_resolution_clock::time_point end =
+        std::chrono::high_resolution_clock::now();
+        std::chrono::microseconds time_all =
+        std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
         start = std::chrono::high_resolution_clock::now();
         getPerm1(test_tree, 1);
         end = std::chrono::high_resolution_clock::now();
-        std::chrono::microseconds time_perm1 = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::chrono::microseconds time_perm1 =
+        std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
         start = std::chrono::high_resolution_clock::now();
         getPerm2(test_tree, 1);
         end = std::chrono::high_resolution_clock::now();
-        std::chrono::microseconds time_perm2 = std::chrono::duration_cast<std::chrono::microseconds>(end - start);
+        std::chrono::microseconds time_perm2 =
+        std::chrono::duration_cast<std::chrono::microseconds>(end - start);
 
         std::cout << "n=" << n
                   << ", getAllPerms: " << time_all.count() << " us"
