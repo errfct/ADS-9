@@ -8,17 +8,17 @@ struct TreeNode {
     char value;
     std::vector<TreeNode*> children;
 
-    TreeNode(char val) : value(val) {}
+    explicit TreeNode(char val) : value(val) {}
     ~TreeNode();
 };
 
 class PMTree {
-private:
+ private:
     TreeNode* root;
     void buildTree(TreeNode* node, const std::vector<char>& elements);
 
-public:
-    PMTree(const std::vector<char>& elements);
+ public:
+    explicit PMTree(const std::vector<char>& elements);
     ~PMTree();
     TreeNode* getRoot() const { return root; }
 };
