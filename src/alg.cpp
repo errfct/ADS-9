@@ -1,10 +1,10 @@
 // Copyright 2022 NNTU-CS
 #include "tree.h"
+#include <cstdlib>
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <locale>
-#include <cstdlib>
-#include <algorithm>
 #include <vector>
 
 TreeNode::~TreeNode() {
